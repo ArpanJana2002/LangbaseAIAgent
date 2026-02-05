@@ -1,0 +1,5 @@
+node_modules/     # Langbase SDK dependencies
+ .env              # LANGBASE_API_KEY, OpenAI keys  
+ logs/             # Runtime logs
+ .vscode/          # VSCode settings (Windows dev)
+ dist/             # TypeScript builds

@@ -1,0 +1,30 @@
+
+# Langbase FAQ Content for RAG Testing
+# Save as: langbase-faq.txt
+
+## General Questions
+
+**Q: What is Langbase?**
+Langbase is a serverless AI developer platform for building composable AI agents with memory, tools, and RAG capabilities. Deploy with one command - no infrastructure management required.
+
+**Q: How do I get started with Langbase?**
+1. Sign up at langbase.com
+2. Generate API key from dashboard → Profile → API Keys
+3. Install SDK: `npm i langbase dotenv`
+4. Use in code: `new Langbase({apiKey: process.env.LANGBASE_API_KEY})`
+
+**Q: What are Langbase Pipes?**
+Pipes are composable AI workflows that chain LLMs, tools, and memory. Types: chat, generate, stream. Deployed serverless as APIs.
+
+**Q: What are Langbase Memories?**
+Memories store your data with automatic chunking, embedding, and vector search. Perfect for RAG apps. Supports PDF, TXT, Markdown, web pages.
+
+## Memory Setup
+
+**Q: How to create a memory programmatically?**
+```typescript
+const memory = await langbase.memories.create({
+  name: 'knowledge-base',
+  description: 'RAG documents',
+  embedding_model: 'openai:text-embedding-3-large'
+});
